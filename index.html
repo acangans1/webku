@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulir Pemesanan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    .form-container {
+      background: white;
+      padding: 25px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #aaa;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #333;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      width: 100%;
+      background: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #219150;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Formulir Pemesanan</h2>
+    <form action="https://formsubmit.co/arshalnazira@gmail.com" method="POST">
+      <!-- Ganti EMAIL-KAMU dengan emailmu, misalnya: kamu@gmail.com -->
+
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="menu">Pilih Menu</label>
+      <select id="menu" name="menu" required>
+        <option value="">-- Pilih Menu --</option>
+        <option value="Nasi Goreng">Nasi Goreng</option>
+        <option value="Mie Ayam">Mie Ayam</option>
+        <option value="Sate Ayam">Sate Ayam</option>
+        <option value="Es Teh Manis">Es Teh Manis</option>
+      </select>
+
+      <label for="jumlah">Jumlah</label>
+      <input type="number" id="jumlah" name="jumlah" min="1" required>
+
+      <label for="alamat">Alamat Pengantaran</label>
+      <textarea id="alamat" name="alamat" rows="3" required></textarea>
+
+      <label for="catatan">Catatan Tambahan</label>
+      <textarea id="catatan" name="catatan" rows="2"></textarea>
+
+      <!-- Anti-spam -->
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit">Kirim Pesanan</button>
+    </form>
+  </div>
+
+</body>
+</html>
